@@ -1,0 +1,18 @@
+/*
+* Send mail through SMTP wordpress Phpmailer class wordpress
+*/
+add_action( 'phpmailer_init', 'mailer_config', 10, 1);
+function mailer_config($mailer){
+  $mailer->IsSMTP();
+  // $mailer->Host = "mail.chaconnect.com"; // your SMTP server
+  $mailer->Host = "nl-sl-box1.e-hostbox.com"; // your SMTP server
+	$mailer->SMTPAuth = true; // if required
+  $mailer->Port = 25;
+  $mailer->ssl = 465;
+  $mailer->tls = 587;
+	$mailer->Username = 'mail@chaconnect.com'; // if required
+	$mailer->Password = 'Mail#12341'; // if required
+	$mailer->SMTPSecure = "tls";
+  $mailer->SMTPDebug = 0; // write 0 if you don't want to see client/server communication in page
+  // $mailer->CharSet  = "utf-8";
+}
