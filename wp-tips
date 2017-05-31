@@ -1,3 +1,4 @@
+<?php 
 /*
 * Send mail through SMTP wordpress Phpmailer class wordpress
 */
